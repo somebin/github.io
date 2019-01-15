@@ -13,8 +13,8 @@ sudo pip install awscli
 vim ~/.zshrc
 
 // 添加如下内容
-export AWS_ACCESS_KEY_ID=AKIAIOD4TPVOXYZM524A
-export AWS_SECRET_ACCESS_KEY=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
+export AWS_ACCESS_KEY_ID=****
+export AWS_SECRET_ACCESS_KEY=****
 export AWS_DEFAULT_REGION=ap-southeast-1
 ```
 
