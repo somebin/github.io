@@ -1,0 +1,31 @@
+#### 如何批量下载bucket里面的全部内容
+
+1.安装一个命令行工具
+```
+sudo easy_install awscli
+或
+sudo pip install awscli
+```
+
+2.配置环境变量并重启终端
+```
+// vim命令打开配置文件
+vim ~/.zshrc
+
+// 添加如下内容
+export AWS_ACCESS_KEY_ID=*****
+export AWS_SECRET_ACCESS_KEY=******
+export AWS_DEFAULT_REGION=*****
+```
+
+3.下载指定的Bucket
+```
+// 下载alex这个bucket里面的全部内容到Download文件夹
+aws s3 sync s3://alex ./Downloads
+
+// 下载note这个bucket里面的全部内容到Download文件夹(不包含名字带有log的文件)
+aws s3 sync s3://note ./Downloads --exclude "*log*"
+
+```
+
+[点击查看官方文档](https://docs.aws.amazon.com/cli/latest/reference/s3/sync.html)
